@@ -1,5 +1,5 @@
 //
-//  KINWebView.h
+//  ZLCWebView.h
 //  测试
 //
 //  Created by shining3d on 16/6/17.
@@ -9,16 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
-@class KINWebView;
+@class ZLCWebView;
 @protocol ZLCWebViewDelegate <NSObject>
 @optional
-- (void)zlcwebView:(KINWebView *)webview didFinishLoadingURL:(NSURL *)URL;
-- (void)zlcwebView:(KINWebView *)webview didFailToLoadURL:(NSURL *)URL error:(NSError *)error;
-- (void)zlcwebView:(KINWebView *)webview shouldStartLoadWithURL:(NSURL *)URL;
-- (void)zlcwebViewDidStartLoad:(KINWebView *)webview;
+- (void)zlcwebView:(ZLCWebView *)webview didFinishLoadingURL:(NSURL *)URL;
+- (void)zlcwebView:(ZLCWebView *)webview didFailToLoadURL:(NSURL *)URL error:(NSError *)error;
+- (void)zlcwebView:(ZLCWebView *)webview shouldStartLoadWithURL:(NSURL *)URL;
+- (void)zlcwebViewDidStartLoad:(ZLCWebView *)webview;
 @end
 
-@interface KINWebView : UIView<WKNavigationDelegate, WKUIDelegate, UIWebViewDelegate>
+@interface ZLCWebView : UIView<WKNavigationDelegate, WKUIDelegate, UIWebViewDelegate>
 
 
 

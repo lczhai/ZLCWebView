@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "KINWebView.h"
 #import "ZLCWebView.h"
+
+#define isiOS8 __IPHONE_OS_VERSION_MAX_ALLOWED>=__IPHONE_8_0
+
 @interface ViewController ()<ZLCWebViewDelegate>
 
 @end
@@ -17,12 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"ZLCWebView";
     
 
     
     ZLCWebView *my = [[ZLCWebView alloc]initWithFrame:self.view.bounds];
-    [my loadURLString:@"http://www.baidu.com"];
+	[my loadURLString:@"http://www.baidu.com"];
     my.delegate = self;
     [self.view addSubview:my];
     
@@ -32,21 +34,22 @@
 }
 
 
-- (void)zlcwebViewDidStartLoad:(KINWebView *)webview
+- (void)zlcwebViewDidStartLoad:(ZLCWebView *)webview
 {
     NSLog(@"页面开始加载");
 }
 
-- (void)zlcwebView:(KINWebView *)webview shouldStartLoadWithURL:(NSURL *)URL
+- (void)zlcwebView:(ZLCWebView *)webview shouldStartLoadWithURL:(NSURL *)URL
 {
     NSLog(@"截取到URL：%@",URL);
 }
-- (void)zlcwebView:(KINWebView *)webview didFinishLoadingURL:(NSURL *)URL
+- (void)zlcwebView:(ZLCWebView *)webview didFinishLoadingURL:(NSURL *)URL
 {
     NSLog(@"页面加载完成");
+	
 }
 
-- (void)zlcwebView:(KINWebView *)webview didFailToLoadURL:(NSURL *)URL error:(NSError *)error
+- (void)zlcwebView:(ZLCWebView *)webview didFailToLoadURL:(NSURL *)URL error:(NSError *)error
 {
     NSLog(@"加载出现错误");
 }

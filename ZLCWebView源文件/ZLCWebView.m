@@ -8,7 +8,7 @@
 
 #import "ZLCWebView.h"
 
-#define isiOS8 __IPHONE_OS_VERSION_MAX_ALLOWED>=__IPHONE_8_0
+#define isiOS8 [[[UIDevice currentDevice] systemVersion] floatValue]>=8.0
 static void *KINWebBrowserContext = &KINWebBrowserContext;
 
 

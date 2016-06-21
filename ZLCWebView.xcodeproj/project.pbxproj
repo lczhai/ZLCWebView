@@ -14,8 +14,7 @@
 		2B9AD6AC1D14DD6D00A81DB5 /* ZLCWebView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AD6AA1D14DD6D00A81DB5 /* ZLCWebView.xcdatamodeld */; };
 		2B9AD6AE1D14DD6D00A81DB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B9AD6AD1D14DD6D00A81DB5 /* Assets.xcassets */; };
 		2B9AD6B11D14DD6D00A81DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B9AD6AF1D14DD6D00A81DB5 /* LaunchScreen.storyboard */; };
-		2B9AD6BA1D14DDD000A81DB5 /* KINWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AD6B91D14DDD000A81DB5 /* KINWebView.m */; };
-		2B9AD6C01D14FE6400A81DB5 /* ZLCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AD6BF1D14FE6400A81DB5 /* ZLCWebView.m */; };
+		A4276A521D191F0E00E3DD38 /* ZLCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4276A511D191F0E00E3DD38 /* ZLCWebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +29,8 @@
 		2B9AD6AD1D14DD6D00A81DB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B9AD6B01D14DD6D00A81DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B9AD6B21D14DD6D00A81DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B9AD6B81D14DDD000A81DB5 /* KINWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KINWebView.h; sourceTree = "<group>"; };
-		2B9AD6B91D14DDD000A81DB5 /* KINWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KINWebView.m; sourceTree = "<group>"; };
-		2B9AD6BE1D14FE6400A81DB5 /* ZLCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCWebView.h; sourceTree = "<group>"; };
-		2B9AD6BF1D14FE6400A81DB5 /* ZLCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCWebView.m; sourceTree = "<group>"; };
+		A4276A501D191F0E00E3DD38 /* ZLCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCWebView.h; sourceTree = "<group>"; };
+		A4276A511D191F0E00E3DD38 /* ZLCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +63,7 @@
 		2B9AD69D1D14DD6D00A81DB5 /* ZLCWebView */ = {
 			isa = PBXGroup;
 			children = (
-				2B9AD6B81D14DDD000A81DB5 /* KINWebView.h */,
-				2B9AD6B91D14DDD000A81DB5 /* KINWebView.m */,
-				2B9AD6BE1D14FE6400A81DB5 /* ZLCWebView.h */,
-				2B9AD6BF1D14FE6400A81DB5 /* ZLCWebView.m */,
+				A4276A4F1D191ED200E3DD38 /* ZLCWebView */,
 				2B9AD6A11D14DD6D00A81DB5 /* AppDelegate.h */,
 				2B9AD6A21D14DD6D00A81DB5 /* AppDelegate.m */,
 				2B9AD6A41D14DD6D00A81DB5 /* ViewController.h */,
@@ -90,6 +84,15 @@
 				2B9AD69F1D14DD6D00A81DB5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A4276A4F1D191ED200E3DD38 /* ZLCWebView */ = {
+			isa = PBXGroup;
+			children = (
+				A4276A501D191F0E00E3DD38 /* ZLCWebView.h */,
+				A4276A511D191F0E00E3DD38 /* ZLCWebView.m */,
+			);
+			path = ZLCWebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,10 +167,9 @@
 			files = (
 				2B9AD6A61D14DD6D00A81DB5 /* ViewController.m in Sources */,
 				2B9AD6AC1D14DD6D00A81DB5 /* ZLCWebView.xcdatamodeld in Sources */,
-				2B9AD6C01D14FE6400A81DB5 /* ZLCWebView.m in Sources */,
 				2B9AD6A31D14DD6D00A81DB5 /* AppDelegate.m in Sources */,
+				A4276A521D191F0E00E3DD38 /* ZLCWebView.m in Sources */,
 				2B9AD6A01D14DD6D00A81DB5 /* main.m in Sources */,
-				2B9AD6BA1D14DDD000A81DB5 /* KINWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
