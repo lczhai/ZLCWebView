@@ -9,8 +9,11 @@
  
 
 ##### 1、将项目中的根目录中的“ZLCWebView源文件”中的ZLCWebView.h及m拖入工程（或直接在项目中拖出）
+ 
+##### 2、在项目Targets ->build Phases  ->link Binary With Libraries 中添加WebKit.framework（否则Deployment Target调整成7.0时,运行程序就会报错）
 
-#####  2、在自己的目标视图加载即可
+##### 3、在自己的目标视图加载即可
+
  
  ```objectivec
  //在目标视图内初始化ZLCWebView 
