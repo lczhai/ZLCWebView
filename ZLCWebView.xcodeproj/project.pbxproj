@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B5999671D195DB100A916DB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5999661D195DB100A916DB /* WebKit.framework */; };
 		2B9AD6A01D14DD6D00A81DB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AD69F1D14DD6D00A81DB5 /* main.m */; };
 		2B9AD6A31D14DD6D00A81DB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AD6A21D14DD6D00A81DB5 /* AppDelegate.m */; };
 		2B9AD6A61D14DD6D00A81DB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AD6A51D14DD6D00A81DB5 /* ViewController.m */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B5999661D195DB100A916DB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		2B9AD69B1D14DD6C00A81DB5 /* ZLCWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLCWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B9AD69F1D14DD6D00A81DB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2B9AD6A11D14DD6D00A81DB5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5999671D195DB100A916DB /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 		2B9AD69E1D14DD6D00A81DB5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2B5999661D195DB100A916DB /* WebKit.framework */,
 				2B9AD69F1D14DD6D00A81DB5 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -282,6 +286,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZLCWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhailiuchuang.ZLCWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -293,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZLCWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhailiuchuang.ZLCWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
