@@ -358,8 +358,12 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 #pragma mark - External App Support
 
 - (BOOL)externalAppRequiredToOpenURL:(NSURL *)URL {
-    NSSet *validSchemes = [NSSet setWithArray:@[@"http", @"https",@"file"]];
-    return ![validSchemes containsObject:URL.scheme];
+	
+	//若需要限制只允许某些前缀的scheme通过请求，则取消下述注释，并在数组内添加自己需要放行的前缀
+//    NSSet *validSchemes = [NSSet setWithArray:@[@"http", @"https",@"file"]];
+//    return ![validSchemes containsObject:URL.scheme];
+	
+	return !URL;
 }
 
 - (void)launchExternalAppWithURL:(NSURL *)URL {
