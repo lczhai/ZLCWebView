@@ -79,8 +79,6 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
         self.progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
         [self.progressView setTrackTintColor:[UIColor colorWithWhite:1.0f alpha:0.0f]];
         [self.progressView setFrame:CGRectMake(0, 64, self.frame.size.width, self.progressView.frame.size.height)];
-        [self.progressView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin];
-        
         
         //设置进度条颜色
         [self setTintColor:[UIColor colorWithRed:0.400 green:0.863 blue:0.133 alpha:1.000]];
@@ -358,8 +356,12 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 #pragma mark - External App Support
 
 - (BOOL)externalAppRequiredToOpenURL:(NSURL *)URL {
-    NSSet *validSchemes = [NSSet setWithArray:@[@"http", @"https",@"file"]];
-    return ![validSchemes containsObject:URL.scheme];
+	
+	//若需要限制只允许某些前缀的scheme通过请求，则取消下述注释，并在数组内添加自己需要放行的前缀
+//    NSSet *validSchemes = [NSSet setWithArray:@[@"http", @"https",@"file"]];
+//    return ![validSchemes containsObject:URL.scheme];
+	
+	return !URL;
 }
 
 - (void)launchExternalAppWithURL:(NSURL *)URL {

@@ -15,7 +15,7 @@
 		2B9AD6AC1D14DD6D00A81DB5 /* ZLCWebView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B9AD6AA1D14DD6D00A81DB5 /* ZLCWebView.xcdatamodeld */; };
 		2B9AD6AE1D14DD6D00A81DB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B9AD6AD1D14DD6D00A81DB5 /* Assets.xcassets */; };
 		2B9AD6B11D14DD6D00A81DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B9AD6AF1D14DD6D00A81DB5 /* LaunchScreen.storyboard */; };
-		A4276A521D191F0E00E3DD38 /* ZLCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4276A511D191F0E00E3DD38 /* ZLCWebView.m */; };
+		A48B9E431D1CDF82004F137E /* ZLCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A48B9E421D1CDF82004F137E /* ZLCWebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +31,8 @@
 		2B9AD6AD1D14DD6D00A81DB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B9AD6B01D14DD6D00A81DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B9AD6B21D14DD6D00A81DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4276A501D191F0E00E3DD38 /* ZLCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCWebView.h; sourceTree = "<group>"; };
-		A4276A511D191F0E00E3DD38 /* ZLCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCWebView.m; sourceTree = "<group>"; };
+		A48B9E411D1CDF82004F137E /* ZLCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCWebView.h; sourceTree = "<group>"; };
+		A48B9E421D1CDF82004F137E /* ZLCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 		2B9AD69D1D14DD6D00A81DB5 /* ZLCWebView */ = {
 			isa = PBXGroup;
 			children = (
-				A4276A4F1D191ED200E3DD38 /* ZLCWebView */,
+				A48B9E401D1CDF82004F137E /* ZLCWebView Resource */,
 				2B9AD6A11D14DD6D00A81DB5 /* AppDelegate.h */,
 				2B9AD6A21D14DD6D00A81DB5 /* AppDelegate.m */,
 				2B9AD6A41D14DD6D00A81DB5 /* ViewController.h */,
@@ -90,13 +90,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A4276A4F1D191ED200E3DD38 /* ZLCWebView */ = {
+		A48B9E401D1CDF82004F137E /* ZLCWebView Resource */ = {
 			isa = PBXGroup;
 			children = (
-				A4276A501D191F0E00E3DD38 /* ZLCWebView.h */,
-				A4276A511D191F0E00E3DD38 /* ZLCWebView.m */,
+				A48B9E411D1CDF82004F137E /* ZLCWebView.h */,
+				A48B9E421D1CDF82004F137E /* ZLCWebView.m */,
 			);
-			path = ZLCWebView;
+			path = "ZLCWebView Resource";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +172,7 @@
 				2B9AD6A61D14DD6D00A81DB5 /* ViewController.m in Sources */,
 				2B9AD6AC1D14DD6D00A81DB5 /* ZLCWebView.xcdatamodeld in Sources */,
 				2B9AD6A31D14DD6D00A81DB5 /* AppDelegate.m in Sources */,
-				A4276A521D191F0E00E3DD38 /* ZLCWebView.m in Sources */,
+				A48B9E431D1CDF82004F137E /* ZLCWebView.m in Sources */,
 				2B9AD6A01D14DD6D00A81DB5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
