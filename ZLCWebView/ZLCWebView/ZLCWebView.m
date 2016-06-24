@@ -79,8 +79,6 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
         self.progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
         [self.progressView setTrackTintColor:[UIColor colorWithWhite:1.0f alpha:0.0f]];
         [self.progressView setFrame:CGRectMake(0, 64, self.frame.size.width, self.progressView.frame.size.height)];
-        [self.progressView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin];
-        
         
         //设置进度条颜色
         [self setTintColor:[UIColor colorWithRed:0.400 green:0.863 blue:0.133 alpha:1.000]];
