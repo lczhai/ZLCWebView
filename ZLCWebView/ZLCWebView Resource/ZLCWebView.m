@@ -9,7 +9,7 @@
 #import "ZLCWebView.h"
 
 #define isiOS8 [[[UIDevice currentDevice] systemVersion] floatValue]>=8.0
-static void *KINWebBrowserContext = &KINWebBrowserContext;
+static void *ZLCWebBrowserContext = &ZLCWebBrowserContext;
 
 
 @interface ZLCWebView ()<UIAlertViewDelegate>
@@ -58,7 +58,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
             [self.wkWebView.scrollView setAlwaysBounceVertical:YES];
             [self addSubview:self.wkWebView];
             self.wkWebView.scrollView.bounces = NO;
-            [self.wkWebView addObserver:self forKeyPath:NSStringFromSelector(@selector(estimatedProgress)) options:0 context:KINWebBrowserContext];
+            [self.wkWebView addObserver:self forKeyPath:NSStringFromSelector(@selector(estimatedProgress)) options:0 context:ZLCWebBrowserContext];
         }
         else  {
             [self.uiWebView setFrame:frame];
@@ -146,11 +146,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 
 //监视请求
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    
-    
-    
-    
-    
+	
     if(webView == self.uiWebView) {
         
         if(![self externalAppRequiredToOpenURL:request.URL]) {
@@ -176,7 +172,6 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     
     
-    NSLog(@"alert : currwebview is UIWebView");
     if(webView == self.uiWebView) {
         if(!self.uiWebView.isLoading) {
             self.uiWebViewIsLoading = NO;
@@ -224,8 +219,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    NSLog(@"alert : currwebview is WKWebView");
-    
+	
     if(webView == self.wkWebView) {
         
         //back delegate
