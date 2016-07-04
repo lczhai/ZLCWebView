@@ -5,7 +5,8 @@
 ###  将UIWebVIew和WKWebView封装到一起，当系统版本大于8.0时候选择WKWebView降低性能消耗，当小于8.0时候使用UIWebView进行加载
  
  
- ____ ios 8.0以上使用ZLCWebView 加载“http://www.baidu.com” ____
+ ____ ios 8.0以上使用ZLCWebView 加载“http://www.baidu.com” ____ 
+     
  ![zlcwebview.png](http://upload-images.jianshu.io/upload_images/2312430-a6ea4a847b0e879d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
  
  
