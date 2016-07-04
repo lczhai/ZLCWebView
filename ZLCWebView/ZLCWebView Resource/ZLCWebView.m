@@ -348,7 +348,6 @@ static void *ZLCWebBrowserContext = &ZLCWebBrowserContext;
 }
 
 #pragma mark - External App Support
-
 - (BOOL)externalAppRequiredToOpenURL:(NSURL *)URL {
 	
 	//若需要限制只允许某些前缀的scheme通过请求，则取消下述注释，并在数组内添加自己需要放行的前缀

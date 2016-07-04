@@ -27,8 +27,7 @@
 	[my loadURLString:@"http://www.baidu.com"];
     my.delegate = self;
     [self.view addSubview:my];
-    
-    
+	
 
     
 }
