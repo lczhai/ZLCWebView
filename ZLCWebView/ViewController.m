@@ -16,21 +16,63 @@
 @end
 
 @implementation ViewController
-
+{
+    NSString *_urlStr;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"ZLCWebView";
+    _urlStr = @"http://www.baidu.com";
+    
     
 
     
     ZLCWebView *my = [[ZLCWebView alloc]initWithFrame:self.view.bounds];
-	[my loadURLString:@"http://www.baidu.com"];
+    
+    
+//    //获取本地缓存路径及获取页面缓存的html（慎用）
+//    NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask,YES) objectAtIndex:0];
+//    NSString * path = [cachesPath stringByAppendingString:[NSString stringWithFormat:@"/Caches/%u.html",(unsigned)[_urlStr hash]]];
+//    NSString *htmlString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+//    
+//    //判断是否加载过（是否已缓存过）
+//    if (!(htmlString ==nil || [htmlString isEqualToString:@""])) {
+//        [my loadHTMLString:htmlString];
+//    }else{
+//        NSURL *url = [NSURL URLWithString:_urlStr];
+//        NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:2 timeoutInterval:5];
+//        [my loadRequest:request];
+//        [self writeToCache];
+//    }
+    
+    NSURL *url = [NSURL URLWithString:_urlStr];
+    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:2 timeoutInterval:5];
+    [my loadRequest:request];
+    
     my.delegate = self;
     [self.view addSubview:my];
 	
 
     
 }
+
+/**
+ * 网页缓存写入文件
+ */
+- (void)writeToCache
+{
+    NSString * htmlResponseStr = [NSString stringWithContentsOfURL:[NSURL URLWithString:_urlStr] encoding:NSUTF8StringEncoding error:Nil];
+    //创建文件管理器
+    NSFileManager *fileManager = [[NSFileManager alloc]init];
+    //获取document路径
+    NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,      NSUserDomainMask, YES) objectAtIndex:0];
+    [fileManager createDirectoryAtPath:[cachesPath stringByAppendingString:@"/Caches"] withIntermediateDirectories:YES attributes:nil error:nil];
+    //写入路径
+    NSString * path = [cachesPath stringByAppendingString:[NSString stringWithFormat:@"/Caches/%u.html",(unsigned)[_urlStr hash]]];
+    
+    [htmlResponseStr writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
+}
+
 
 
 - (void)zlcwebViewDidStartLoad:(ZLCWebView *)webview
